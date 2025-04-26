@@ -1,0 +1,22 @@
+{
+  "name": "fgo24-node-coffeeshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev" : "node --watch index.js",
+    "lint" : "eslint index.js src/**/*.js",
+    "lint:fix": "eslint --fix index.js src/**/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0"
+  }
+}
