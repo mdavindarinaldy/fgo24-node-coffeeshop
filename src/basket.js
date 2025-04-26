@@ -21,6 +21,10 @@ export function viewBasket() {
 }
 
 export function checkOut() {
+  if (basket.price===0) {
+    console.log('Terima kasih sudah melihat menu kami! Sampai jumpa lain waktu ^-^');
+    return close();
+  }
   console.log('Daftar Belanja: ');
   basket.item.forEach(result=> {
     console.log(`${basket.item.indexOf(result)}. ${result}`);
