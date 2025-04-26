@@ -27,7 +27,7 @@ export function mainMenu() {
         else if(input2===3) {snacksMenu(listItem.snacks);}
         else if(input2===4) {dessertsMenu(listItem.desserts);}
         else if(input2===0) {mainMenu();}
-        else {errorMessage;}
+        else {errorMessage();}
       });
     } else if (input1===2) {viewBasket();}
     else if (input1===3) {checkOut();}
@@ -49,10 +49,10 @@ function foodsMenu(data) {
           addItem(data[input1-1].type, data[input1-1].price);
           mainMenu();
         } else if (input2==="Tidak") { foodsMenu(data);}
-        else { errorMessage;}
+        else { errorMessage();}
       });
     }
-    else { errorMessage; }
+    else { errorMessage(); }
   });
 }
 
@@ -67,10 +67,10 @@ function drinksMenu(data) {
           addItem(data[input1-1].type, data[input1-1].price);
           mainMenu();
         } else if (input2==="Tidak") { drinksMenu(data);}
-        else { errorMessage; }
+        else { errorMessage(); }
       });
     }
-    else { errorMessage; }
+    else { errorMessage(); }
   });
 }
 
@@ -85,10 +85,10 @@ function snacksMenu(data) {
           addItem(data[input1-1].type, data[input1-1].price);
           mainMenu();
         } else if (input2==="Tidak") { snacksMenu(data);}
-        else { errorMessage; }
+        else { errorMessage(); }
       });
     }
-    else { errorMessage; }
+    else { errorMessage(); }
   });
 }
 
@@ -103,10 +103,10 @@ function dessertsMenu(data) {
           addItem(data[input1-1].type, data[input1-1].price);
           mainMenu();
         } else if (input2==="Tidak") { dessertsMenu(data);}
-        else { errorMessage; }
+        else { errorMessage(); }
       });
     }
-    else { errorMessage; }
+    else { errorMessage(); }
   });
 }
 
