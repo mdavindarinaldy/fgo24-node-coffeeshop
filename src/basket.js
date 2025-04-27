@@ -8,10 +8,11 @@ let basket = {
 export function addItem(item, price) {
   basket.item = [...basket.item, item];
   basket.price = basket.price + price;
-  console.log(`${item} berhasil ditambahkan ke Keranjang`);
+  console.log(`${item} berhasil ditambahkan ke Keranjang\n`);
 }
 
 export function viewBasket() {
+  console.clear();
   console.log('Keranjang: ');
   basket.item.forEach(result=> {
     console.log(`${basket.item.indexOf(result)+1}. ${result}`);
@@ -21,13 +22,14 @@ export function viewBasket() {
 }
 
 export function checkOut() {
+  console.clear();
   if (basket.price===0) {
     console.log('Terima kasih sudah melihat menu kami! Sampai jumpa lain waktu ^-^');
     return close();
   }
   console.log('Daftar Belanja: ');
   basket.item.forEach(result=> {
-    console.log(`${basket.item.indexOf(result)}. ${result}`);
+    console.log(`${basket.item.indexOf(result)+1}. ${result}`);
   });
   console.log(`\nTotal Harga: Rp ${basket.price}\nTerima kasih sudah memesan!`);
   close();
